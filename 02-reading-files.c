@@ -22,7 +22,8 @@ int main(int argc, char *argv[])
 
     char *ptr = mmap(NULL, statbuf.st_size,
                      PROT_READ | PROT_WRITE,
-                     MAP_SHARED,
+                     MAP_PRIVATE,
+                     // MAP_SHARED,
                      fd, 0);
     assert(ptr != MAP_FAILED);
     close(fd);
